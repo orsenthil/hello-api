@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-pod
+  labels:
+    run: connectApi
+spec:
+  containers:
+    - name: client
+      image: 428051789465.dkr.ecr.us-west-2.amazonaws.com/hello-api
+      ports:
+        - containerPort: 3000
